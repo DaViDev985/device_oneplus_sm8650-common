@@ -337,6 +337,10 @@ PRODUCT_PACKAGES += \
     qspa_vendor.rc \
     vendor.qti.qspa-service
 
+# Remove Packages
+PRODUCT_PACKAGES += \
+    RemovePackages
+
 # SecureElement
 ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
