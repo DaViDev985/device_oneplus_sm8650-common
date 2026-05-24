@@ -187,6 +187,9 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/privapp-permissions-hotword.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/permissions/privapp-permissions-hotword.xml
 
+# HWUI
+TARGET_USES_VULKAN := true
+
 # Init
 PRODUCT_PACKAGES += \
     fstab.qcom \
@@ -340,13 +343,6 @@ PRODUCT_PACKAGES += \
 ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     SecureElementResTarget_Vendor
-
-OMAPI_UUID_MAP_IDS := 7 15 23 29 31
-
-PRODUCT_COPY_FILES += \
-    $(foreach UUID_MAP_ID, $(OMAPI_UUID_MAP_IDS), \
-        $(LOCAL_PATH)/configs/omapi/hal_uuid_map_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_$(UUID_MAP_ID).xml) \
-    $(LOCAL_PATH)/configs/omapi/hal_uuid_map_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/hal_uuid_map_config.xml
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/permissions/com.android.se.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/com.android.se.xml
