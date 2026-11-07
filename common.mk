@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2021-2026 The LineageOS Project
-#
+# SPDX-FileCopyrightText: The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -304,7 +303,8 @@ PRODUCT_PACKAGES += \
 ifneq ($(TARGET_IS_TABLET),true)
 PRODUCT_PACKAGES += \
     CarrierConfigResCommon \
-    FrameworksResTargetPhone
+    FrameworksResTargetPhone \
+    NfcResCommon_Sys
 endif
 
 # Partitions
